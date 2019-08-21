@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <style>
+      table {
+        border-collapse: collapse;
+        border: 1px solid #000;
+      }
+
+      td {
+        width: 50px;
+        height: 50px;
+        border: 1px solid #000;
+        text-align: center;
+        vertical-align: center;
+        font-family: monospace;
+        font-size: 18px;
+        position: relative;
+      }
+
+      .pixel-index {
+        font-size: 10px;
+        display: inline-block;
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        color: #999;
+      }
+
+      td.pixel {
+        width: 4px;
+        height: 4px;
+        border: 0;
+      }
+
+      .color-control {
+        display: inline-grid;
+        border: 1px;
+        padding: 10px 0px;
+        width: 4%;
+      }
+
+      .button {
+        cursor: pointer;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="fireCanvas"></div>
+    <div class="color-control">
+      <button class="button" onclick="controlColor('R')">Red Fire</button>
+    </div>
+    <div class="color-control">
+      <button class="button" onclick="controlColor('G')">Green Fire</button>
+    </div>
+    <div class="color-control">
+      <button class="button" onclick="controlColor('B')">Blue Fire</button>
+    </div>
+    <div class="intensity-control">
+      <button class="button" onclick="increaseFireIntensity()">Increase Fire</button>
+      <button class="button" onclick="toggleDebug()">Toggle Debug</button>
+      <button class="button" onclick="decreaseFireIntensity()">Decrease Fire</button>
+    </div>
+    <script src="fire.js"></script>
+  </body>
+</html>
